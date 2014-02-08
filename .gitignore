@@ -1,1 +1,4 @@
 hyphen-venv/
+config.py
+*.db
+db_repository/
