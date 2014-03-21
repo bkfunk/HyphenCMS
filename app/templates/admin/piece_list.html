@@ -1,0 +1,23 @@
+{% extends 'admin/model/list.html' %}
+{# Macros for rendering the columns in the piece list #}
+{% macro render_author(model, column) %}
+  {% if model[column] %}
+    {{ model[column].first_middle_last() }}
+  {% endif %}
+{% endmacro %}
+
+
+{% macro render_genre(model, column) %}
+  {{ model[column].title }}
+{% endmacro %}
+
+{% macro render_items(model, column) %}
+  {% for item in model[column].all() %}
+    <p><a href="{{ url_for('.edit_view', id=item.id, url=return_url) }}">{{item.title}}</a></p>
+  {% endfor %}
+{% endmacro %}
+
+
+{% block list_row %}
+  {{ super() }}
+{% endblock %}

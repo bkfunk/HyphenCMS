@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block main_content %}
+<div class="toc">
+{% if pieces %}
+	{% for piece in pieces %}
+		{% include 'toc-piece.html' %}
+	{% endfor %}
+{% else %}
+<div><p>No pieces!</p></div>
+{% endif %}
+</div>
+{% endblock %}

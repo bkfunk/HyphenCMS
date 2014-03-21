@@ -1,0 +1,93 @@
+// Colors
+@bold-color:    color("#1049A9"); // Blue
+@bright-color:  color("#FF6200"); // Orange
+@primary-color: color("#00A480"); // Green
+@accent-color:  color("#FFA400"); // Yellow
+@body-color: color("black");
+
+/*
+Orange
+Hex: #FF6200
+HSL: 23° 100% 50%
+RGB: 255 98 0
+
+Green
+Hex: #00A480
+HSL: 167° 100% 32%
+RGB: 0 164 128
+
+Blue
+Hex: #1049A9
+HSL: 218° 83% 36%
+RGB: 16 73 169
+
+Yellow
+Hex: #FFA400
+HSL: 39° 100% 50%
+RGB: 255 164 0
+*/
+
+// Fonts
+@title-font: 'Raleway', Helvetica, sans-serif;
+@body-font: 'Crimson Text', Garamond, Georgia, Times, serif;
+@accent-font: 'Josefin Sans', Helvetica, sans-serif;
+
+@logo-font-size: 48px;
+@navlink-font-size: @logo-font-size * .6;
+
+#navbar {
+    .navbar-brand {
+        //super();
+        font-family: @title-font;
+        font-weight: 100;
+        font-size: @logo-font-size;
+        line-height: 95%;
+        height: 2 * @logo-font-size;
+    }
+    .navbar-brand h1 {
+        padding: 0;
+        margin: 0;
+    }
+    .navbar-brand .hyphen {
+        color: @bright-color;
+    }
+    
+    .navbar-nav *{
+        font-family: @title-font;
+        font-size: @navlink-font-size;
+    }
+    .navbar-nav > li > .dropdown-menu a {
+        font-size: @navlink-font-size / 2;
+    }
+}
+.toc {
+    @piece-title-font-size: @logo-font-size * .6;
+    @piece-byline-font-size: @piece-title-font-size * .6;
+    @piece-genre-font-size: @piece-byline-font-size;
+  
+    .toc-piece-title {
+        color: @primary-color;
+        font-family: @title-font;
+        font-size: @piece-title-font-size;
+    }
+    .toc-piece-title a {
+        color: @primary-color;
+    }
+    .toc-piece-byline {
+        color: @body-color;
+        font-family: @body-font;
+        font-size: @piece-byline-font-size;
+        font-variant: small-caps;
+    }
+    .toc-piece-byline a {
+        color: @accent-color;
+    }
+    .toc-piece-genre {
+        color: @bold-color;
+        font-family: @body-font;
+        font-size: @piece-genre-font-size;
+        font-variant: normal;
+    }
+}
+
+

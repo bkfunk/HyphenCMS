@@ -1,0 +1,15 @@
+<div class="toc-piece">
+  <h2 class="toc-piece-genre">{{ piece.genre.markup | safe }}:</h2>
+  {% if piece.author %}
+  <div class="toc-piece-byline">
+    <a href="/a/{{piece.author}}">
+    {{piece.author.first_middle_last()}}</a>
+  </div>
+  {% endif %}
+  {% for item in piece.items %}
+    <h2 class="toc-piece-title"><a href="/p/#">{{item.title}}</a></h2>
+    {% if item.abstract %}
+      <div class="toc-piece-abstract {{item.abstract_style}}">{{item.abstract | safe}}</div>
+    {% endif %}
+  {% endfor %}
+</div>

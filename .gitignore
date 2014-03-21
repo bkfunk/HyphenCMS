@@ -2,3 +2,7 @@ hyphen-venv/
 config.py
 *.db
 db_repository/
+**/*.pyc
+.komodotools/
+*.komodoproject
+app/static/bootstrap/*
